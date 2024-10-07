@@ -1,3 +1,4 @@
+import { up } from "../commands/up.js";
 import { getArgByName } from "./utils.js";
 
 const username = getArgByName("--username");
@@ -11,5 +12,5 @@ export const messages = {
 };
 
 export const commands = {
-  up: null,
+  up: up,
 };
