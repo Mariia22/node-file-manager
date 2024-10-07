@@ -11,7 +11,7 @@ export const rl = createInterface({
 
 console.log(messages.greeting);
 process.chdir(homedir());
-console.log(messages.currentPath);
+console.log(`You are currently in ${process.cwd()}`);
 rl.prompt();
 rl.on("line", (line) => {
   const command = line.trim();

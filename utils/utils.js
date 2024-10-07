@@ -1,9 +1,10 @@
 import { rl } from "../index.js";
 import { messages, commands } from "./const.js";
+import { cwd, exit, argv } from "process";
 
 export const getArgByName = (name) => {
   const args = Object.fromEntries(
-    process.argv.slice(2).map((arg) => {
+    argv.slice(2).map((arg) => {
       const [key, value] = arg.split("=");
       return [key, value];
     }),
@@ -13,7 +14,7 @@ export const getArgByName = (name) => {
 
 export const finishProcess = () => {
   console.log(messages.farewell);
-  process.exit();
+  exit();
 };
 
 export const handleCommand = async (command) => {
@@ -21,7 +22,7 @@ export const handleCommand = async (command) => {
     if (Object.keys(commands).includes(command)) {
       try {
         await commands[command]();
-        console.log(messages.currentPath);
+        console.log(`You are currently in ${cwd()}`);
       } catch (error) {
         console.log(messages.failedMessage);
       }
