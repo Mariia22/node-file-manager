@@ -2,6 +2,7 @@ import { up } from "./up.js";
 import { homedir } from "os";
 import { chdir } from "process";
 import { resolve } from "path";
+import { messages } from "../utils/const.js";
 
 export const cd = (pathToDirectory) => {
   try {
@@ -17,6 +18,6 @@ export const cd = (pathToDirectory) => {
         chdir(resolvedPath);
     }
   } catch (error) {
-    console.log(error.message);
+    console.log(messages.failedMessage);
   }
 };

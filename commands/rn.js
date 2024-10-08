@@ -1,5 +1,6 @@
 import { dirname, resolve } from "path";
 import { rename } from "fs/promises";
+import { messages } from "../utils/const.js";
 
 export const rn = async (args) => {
   try {
@@ -7,6 +8,6 @@ export const rn = async (args) => {
     const dirnameFromPath = dirname(path);
     await rename(resolve(path), resolve(dirnameFromPath, newFileName));
   } catch (error) {
-    console.log(error);
+    console.log(messages.failedMessage);
   }
 };

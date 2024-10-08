@@ -2,6 +2,7 @@ import { cwd } from "process";
 import { readdir } from "fs/promises";
 import { sortByNameAsc } from "../utils/utils.js";
 import { rl } from "../index.js";
+import { messages } from "../utils/const.js";
 
 export const ls = () => {
   readdir(cwd(), { withFileTypes: true })
@@ -13,6 +14,6 @@ export const ls = () => {
       );
       console.table([...sortByNameAsc(directories), ...sortByNameAsc(files)]);
     })
-    .catch((error) => console.log(error))
+    .catch((error) => console.log(messages.failedMessage))
     .finally(() => rl.prompt());
 };

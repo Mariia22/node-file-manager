@@ -1,6 +1,7 @@
 import { createReadStream } from "fs";
 import { resolve } from "path";
 import { rl } from "../index.js";
+import { messages } from "../utils/const.js";
 
 export const cat = async (pathToFile) => {
   try {
@@ -14,9 +15,9 @@ export const cat = async (pathToFile) => {
       rl.prompt();
     });
     content.on("error", (error) => {
-      console.error("Error reading file:", error.message);
+      console.error(messages.failedMessage);
     });
   } catch (error) {
-    console.error(error.message);
+    console.error(messages.failedMessage);
   }
 };

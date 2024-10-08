@@ -12,6 +12,6 @@ export const up = () => {
       console.log(messages.rootMessage);
     }
   } catch (error) {
-    console.log(error.message);
+    console.log(messages.failedMessage);
   }
 };

@@ -1,6 +1,7 @@
 import { createReadStream, createWriteStream } from "fs";
 import { pipeline } from "stream/promises";
 import { basename, resolve } from "path";
+import { messages } from "../utils/const.js";
 
 export const cp = async (paths) => {
   try {
@@ -11,6 +12,6 @@ export const cp = async (paths) => {
     const writableStream = createWriteStream(newPathToFile);
     await pipeline(readableStream, writableStream);
   } catch (error) {
-    console.log(error);
+    console.log(messages.failedMessage);
   }
 };
