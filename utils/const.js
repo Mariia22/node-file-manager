@@ -1,6 +1,7 @@
 import { add } from "../commands/add.js";
 import { cat } from "../commands/cat.js";
 import { cd } from "../commands/cd.js";
+import { cp } from "../commands/cp.js";
 import { ls } from "../commands/ls.js";
 import { rn } from "../commands/rn.js";
 import { up } from "../commands/up.js";
@@ -24,4 +25,5 @@ export const commands = {
   cat,
   add,
   rn,
+  cp,
 };
