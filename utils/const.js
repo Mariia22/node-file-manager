@@ -2,6 +2,7 @@ import { add } from "../commands/add.js";
 import { cat } from "../commands/cat.js";
 import { cd } from "../commands/cd.js";
 import { ls } from "../commands/ls.js";
+import { rn } from "../commands/rn.js";
 import { up } from "../commands/up.js";
 import { getArgByName } from "./utils.js";
 
@@ -22,4 +23,5 @@ export const commands = {
   ls,
   cat,
   add,
+  rn,
 };
