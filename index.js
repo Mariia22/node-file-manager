@@ -13,9 +13,9 @@ console.log(messages.greeting);
 process.chdir(homedir());
 console.log(`You are currently in ${process.cwd()}`);
 rl.prompt();
-rl.on("line", (line) => {
-  const command = line.trim();
-  switch (command) {
+rl.on("line", (arg) => {
+  const command = arg.split(" ");
+  switch (command[0].trim()) {
     case ".exit":
     case "close":
       finishProcess();

@@ -1,3 +1,4 @@
+import { cd } from "../commands/cd.js";
 import { up } from "../commands/up.js";
 import { getArgByName } from "./utils.js";
 
@@ -8,8 +9,11 @@ export const messages = {
   farewell: `Thank you for using File Manager, ${username}, goodbye!`,
   invalidMessage: "Invalid input",
   failedMessage: "Operation failed",
+  rootMessage:
+    "You are in the root folder. This operation doesn't change working directory",
 };
 
 export const commands = {
-  up: up,
+  up,
+  cd,
 };

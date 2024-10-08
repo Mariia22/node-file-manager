@@ -18,10 +18,12 @@ export const finishProcess = () => {
 };
 
 export const handleCommand = async (command) => {
+  const arg = command.splice(1).join();
+  const func = command[0].trim();
   try {
-    if (Object.keys(commands).includes(command)) {
+    if (Object.keys(commands).includes(func)) {
       try {
-        await commands[command]();
+        await commands[func](arg);
         console.log(`You are currently in ${cwd()}`);
       } catch (error) {
         console.log(messages.failedMessage);
