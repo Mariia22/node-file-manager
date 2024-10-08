@@ -36,3 +36,7 @@ export const handleCommand = async (command) => {
   }
   await rl.prompt();
 };
+
+export const sortByNameAsc = (arr) => {
+  return arr.sort((a, b) => a.name - b.name);
+};

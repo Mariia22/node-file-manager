@@ -1,4 +1,5 @@
 import { cd } from "../commands/cd.js";
+import { ls } from "../commands/ls.js";
 import { up } from "../commands/up.js";
 import { getArgByName } from "./utils.js";
 
@@ -16,4 +17,5 @@ export const messages = {
 export const commands = {
   up,
   cd,
+  ls,
 };
