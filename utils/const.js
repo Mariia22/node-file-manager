@@ -1,3 +1,4 @@
+import { cat } from "../commands/cat.js";
 import { cd } from "../commands/cd.js";
 import { ls } from "../commands/ls.js";
 import { up } from "../commands/up.js";
@@ -18,4 +19,5 @@ export const commands = {
   up,
   cd,
   ls,
+  cat,
 };
