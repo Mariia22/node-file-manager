@@ -3,6 +3,7 @@ import { cat } from "../commands/cat.js";
 import { cd } from "../commands/cd.js";
 import { cp } from "../commands/cp.js";
 import { ls } from "../commands/ls.js";
+import { mv } from "../commands/mv.js";
 import { rn } from "../commands/rn.js";
 import { up } from "../commands/up.js";
 import { getArgByName } from "./utils.js";
@@ -26,4 +27,5 @@ export const commands = {
   add,
   rn,
   cp,
+  mv,
 };
