@@ -4,6 +4,7 @@ import { cd } from "../commands/cd.js";
 import { cp } from "../commands/cp.js";
 import { ls } from "../commands/ls.js";
 import { mv } from "../commands/mv.js";
+import { os } from "../commands/os.js";
 import { rm } from "../commands/rm.js";
 import { rn } from "../commands/rn.js";
 import { up } from "../commands/up.js";
@@ -18,6 +19,7 @@ export const messages = {
   failedMessage: "Operation failed",
   rootMessage:
     "You are in the root folder. This operation doesn't change working directory",
+  osError: "Command is not recognize. Try again",
 };
 
 export const commands = {
@@ -30,4 +32,5 @@ export const commands = {
   cp,
   mv,
   rm,
+  os,
 };
