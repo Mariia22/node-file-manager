@@ -1,7 +1,9 @@
 import { add } from "../commands/add.js";
 import { cat } from "../commands/cat.js";
 import { cd } from "../commands/cd.js";
+import { compress } from "../commands/compress.js";
 import { cp } from "../commands/cp.js";
+import { decompress } from "../commands/decompress.js";
 import { hash } from "../commands/hash.js";
 import { ls } from "../commands/ls.js";
 import { mv } from "../commands/mv.js";
@@ -35,4 +37,6 @@ export const commands = {
   rm,
   os,
   hash,
+  compress,
+  decompress,
 };

@@ -40,3 +40,13 @@ export const handleCommand = async (command) => {
 export const sortByNameAsc = (arr) => {
   return arr.sort((a, b) => a.name - b.name);
 };
+
+export const useStreams = async (
+  sourceFile,
+  destinationPath,
+  compressionFunc,
+) => {
+  const readStream = createReadStream(sourceFile);
+  const writableStream = createWriteStream(destinationPath);
+  await pipeline(readStream, compressionFunc, writableStream);
+};
