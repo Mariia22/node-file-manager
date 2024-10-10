@@ -1,8 +1,8 @@
-import { createHash } from "crypto";
-import { createReadStream } from "fs";
-import { Writable } from "stream";
-import { resolve } from "path";
-import { pipeline } from "stream/promises";
+import { createHash } from "node:crypto";
+import { createReadStream } from "node:fs";
+import { Writable } from "node:stream";
+import { resolve } from "node:path";
+import { pipeline } from "node:stream/promises";
 import { messages } from "../utils/const.js";
 
 export const hash = async (path) => {

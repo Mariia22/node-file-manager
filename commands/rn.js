@@ -1,5 +1,5 @@
-import { dirname, resolve } from "path";
-import { rename } from "fs/promises";
+import { dirname, resolve } from "node:path";
+import { rename } from "node:fs/promises";
 import { messages } from "../utils/const.js";
 
 export const rn = async (args) => {

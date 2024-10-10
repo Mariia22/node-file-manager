@@ -1,6 +1,6 @@
 import { rl } from "../index.js";
 import { messages, commands } from "./const.js";
-import { cwd, exit, argv } from "process";
+import { cwd, exit, argv } from "node:process";
 
 export const getArgByName = (name) => {
   const args = Object.fromEntries(

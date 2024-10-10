@@ -1,6 +1,6 @@
 import { messages } from "../utils/const.js";
-import { EOL, cpus, userInfo } from "os";
-import { arch } from "process";
+import { EOL, cpus, userInfo } from "node:os";
+import { arch } from "node:process";
 
 export const os = async (command) => {
   const normalizeCommand = command.slice(2);

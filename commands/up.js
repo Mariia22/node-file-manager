@@ -1,5 +1,5 @@
-import { cwd, chdir } from "process";
-import { sep, resolve } from "path";
+import { cwd, chdir } from "node:process";
+import { sep, resolve } from "node:path";
 import { messages } from "../utils/const.js";
 
 export const up = () => {

@@ -1,6 +1,6 @@
-import { createInterface } from "readline";
+import { createInterface } from "node:readline";
 import { messages } from "./utils/const.js";
-import { homedir } from "os";
+import { homedir } from "node:os";
 import { finishProcess, handleCommand } from "./utils/utils.js";
 
 export const rl = createInterface({

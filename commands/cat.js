@@ -1,5 +1,5 @@
-import { createReadStream } from "fs";
-import { resolve } from "path";
+import { createReadStream } from "node:fs";
+import { resolve } from "node:path";
 import { rl } from "../index.js";
 import { messages } from "../utils/const.js";
 

@@ -1,6 +1,6 @@
-import { writeFile } from "fs/promises";
-import { resolve } from "path";
-import { cwd } from "process";
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { cwd } from "node:process";
 import { messages } from "../utils/const.js";
 
 export const add = async (fileName) => {

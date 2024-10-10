@@ -1,5 +1,5 @@
-import { cwd } from "process";
-import { readdir } from "fs/promises";
+import { cwd } from "node:process";
+import { readdir } from "node:fs/promises";
 import { sortByNameAsc } from "../utils/utils.js";
 import { rl } from "../index.js";
 import { messages } from "../utils/const.js";

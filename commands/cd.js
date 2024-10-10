@@ -1,7 +1,7 @@
 import { up } from "./up.js";
-import { homedir } from "os";
-import { chdir } from "process";
-import { resolve } from "path";
+import { homedir } from "node:os";
+import { chdir } from "node:process";
+import { resolve } from "node:path";
 import { messages } from "../utils/const.js";
 
 export const cd = (pathToDirectory) => {

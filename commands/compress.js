@@ -1,5 +1,5 @@
-import { createBrotliCompress } from "zlib";
-import { resolve, parse } from "path";
+import { createBrotliCompress } from "node:zlib";
+import { resolve, parse } from "node:path";
 import { useStreams } from "../utils/utils.js";
 
 export const compress = async (paths) => {

@@ -1,6 +1,6 @@
-import { createReadStream, createWriteStream } from "fs";
-import { pipeline } from "stream/promises";
-import { basename, resolve } from "path";
+import { createReadStream, createWriteStream } from "node:fs";
+import { pipeline } from "node:stream/promises";
+import { basename, resolve } from "node:path";
 import { messages } from "../utils/const.js";
 
 export const cp = async (paths) => {
