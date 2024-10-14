@@ -4,7 +4,8 @@ import { useStreams } from "../utils/utils.js";
 
 export const compress = async (paths) => {
   const [source, destination] = paths.split(",");
-  const { base } = parse(resolve(source));
+  const sourceFile = resolve(source);
+  const { base } = parse(sourceFile);
   const fileName = `${base}.br`;
   const destinationPath = resolve(destination, fileName);
   const brotliCompress = createBrotliCompress();
